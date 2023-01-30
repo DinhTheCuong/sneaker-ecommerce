@@ -1,0 +1,12 @@
+:root {
+    --header-height: 48px;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.w-c {
+    color: #fff
+}
