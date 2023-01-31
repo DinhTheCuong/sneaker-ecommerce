@@ -574,6 +574,7 @@ hr {
     background-color: rgba(0, 0, 0, 0.48);
     width: 100%;
     height: 100%;
+    animation: showSearch 0.4s ease-out;
 }
 
 .header-search {
@@ -600,7 +601,8 @@ hr {
     padding: 0 12px;
     border: none;
     background-color: transparent;
-    font-size: 18px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 input:focus {
@@ -630,20 +632,19 @@ input:focus {
     margin: 0 30px;
     color: #6e6e73;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;
 }
 
 .search-item {
-    padding: 12px 40px;
+    color: #000;
+    padding: 12px 30px;
 }
 
 .search-item:hover {
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
-}
-
-.search-item:hover a {
-    color: #0066cc;
 }
 
 .search-item a {
@@ -652,8 +653,35 @@ input:focus {
     text-decoration: none;
 }
 
-/* cart space */
+.search-item:hover a {
+    color: #0066cc;
+}
 
+.header-item-search:hover {
+    cursor: pointer;
+    color: #f5f5f7;
+}
+
+.header-item-search {
+    color: #c5c5c5;
+}
+
+.hide-search-icon:hover {
+    color: #f5f5f7;
+}
+
+@keyframes showSearch {
+    from {
+        opacity: 0.6;
+        top: -8%;
+    } 
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* cart space */
 .header-item .cart {
     position: absolute;
     z-index: 3;
@@ -664,6 +692,7 @@ input:focus {
     width: 246px;
     border-radius: 18px;
     display: none;
+    animation: showCart 0.9s ease-in;
 }
 
 .header-item .cart::after {
@@ -727,4 +756,13 @@ input:focus {
 
 .header-item:hover .cart {
     display: block;
+}
+
+@keyframes showCart {
+    from {
+        opacity: 0.9;
+    } 
+    to {
+        opacity: 1;
+    }
 }
