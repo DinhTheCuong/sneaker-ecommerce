@@ -11,4 +11,4 @@ function showSearch()  {
 function hideSearch()  {
     console.log(search)
     search.style.display = 'none';
-}
+} 
