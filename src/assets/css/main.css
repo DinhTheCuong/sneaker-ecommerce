@@ -119,6 +119,17 @@
     display: flex;
     list-style-type: none;
     overflow-x: scroll;
+    transform: scale(1);
+    transition: transform 0.5s ease-in, opacity 0.7s cubic-bezier(0.15, 0, 0.2, 1) 0.1s;
+
+}
+
+@keyframes slide {
+    form {
+        transform: translateX(0)
+    } to {
+        transform: translateX(50px);
+    }
 }
 
 .scroller-list::-webkit-scrollbar {
@@ -184,6 +195,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .next-btn:hover {
@@ -562,9 +574,8 @@ hr {
 }
 
 /* search space */
-
 .search {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 2;
     top: 0;
@@ -664,6 +675,10 @@ input:focus {
 
 .header-item-search {
     color: #c5c5c5;
+}
+
+.hide-search-icon {
+    font-size: 18px;
 }
 
 .hide-search-icon:hover {

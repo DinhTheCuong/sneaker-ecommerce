@@ -56,22 +56,36 @@
                             <a href="">HỖ TRỢ</a>
                         </li>
                         <li class="header-item-search" onclick="showSearch()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="16" 
+                            height="16" 
+                            fill="currentColor" 
+                            class="bi bi-search"
+                            viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>                                                   
                         
                             <!-- Search space -->
-                            <div class="search">
+                            <div class="search" id="search">
                                 <form action="">
                                     <div class="header-search">
                                         <div class="search-bar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                            width="20" 
+                                            height="20" 
+                                            fill="currentColor" 
+                                            class="bi bi-search" 
+                                            viewBox="0 0 16 16">
                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                             </svg>
                 
                                             <input type="text" placeholder="Bạn đang tìm một đôi giày?">
                 
-                                            <i class="hide-search-icon fa-solid fa-x" onclick="hideSearch()"></i>
+                                            <i
+                                                class="hide-search-icon fa-solid fa-x" 
+                                                onclick="hideSearch()"
+                                            ></i>
                                         </div>
                 
                                         <ul class="search-list">
@@ -196,7 +210,7 @@
                 </div>
 
                 <div class="scroller">
-                    <ul class="scroller-list">
+                    <ul class="scroller-list slider" id="slider">
                         <li class="scroller-item">
                             <a href="">
                                 <img src="./assets/img/product-type/classic.png" alt="">
@@ -248,10 +262,11 @@
                     </ul>
 
                     <div class="scroller-btn">
-                        <div class="prev-btn">
+                        <div class="prev-btn" onclick="slideLeft()">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                        <div class="next-btn">
+
+                        <div class="next-btn" onclick="slideRight()">
                             <i class="fa-solid fa-angle-right"></i>
                         </div>
                     </div>
@@ -263,7 +278,7 @@
                         Hãy xem những gì mới, ngay bây giờ.
                     </p>
                                         
-                    <ul class="products-list">
+                    <ul class="products-list slider">
                         <li class="product-item">
                             <a href="./product.html">
                                 <div class="product-content">
@@ -341,7 +356,7 @@
                         <div class="prev-btn">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                        <div class="next-btn">
+                        <div class="next-btn" onclick="slideRight()">
                             <i class="fa-solid fa-angle-right"></i>
                         </div>
                     </div>
@@ -720,6 +735,7 @@
         </div>
     </div>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/slide.js"></script>
 </body>
 </html>
