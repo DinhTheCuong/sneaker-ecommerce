@@ -1,14 +1,15 @@
-let searchIcon = document.querySelector('.header-item-search');
+let searchIcon = document.getElementById('nut-sear-ma-dit-me-cuong');
 let hideSearchIcon = document.querySelector('.hide-search-icon');
 let search = document.querySelector('.search');
 
 // Show search
 function showSearch()  {
-    search.style.display = 'block';
+    if(search.style.display !== 'block'){
+        search.style.display = 'block';
+    }
 }
 
 // Hide Search
 function hideSearch()  {
-    console.log(search)
     search.style.display = 'none';
 } 

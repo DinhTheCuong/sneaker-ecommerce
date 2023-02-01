@@ -730,6 +730,7 @@ input:focus {
 
 .hide-search-icon:hover {
     color: #f5f5f7;
+    cursor: pointer;
 }
 
 @keyframes showSearch {
