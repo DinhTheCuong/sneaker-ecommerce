@@ -1,0 +1,19 @@
+.slider {
+    padding: 0;
+}
+
+.slider1 .slick-slide {
+    width: 400px;
+    height: 500px;
+    margin-left: 10px;
+}
+
+.slider3 .slick-slide {
+    margin-left: 10px;
+}
+
+.slider4 .slick-slide {
+    margin-left: 10px;
+    width: 500px;
+    height: 504px;
+}
