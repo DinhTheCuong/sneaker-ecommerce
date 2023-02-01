@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vans Store Việt Nam</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>VANS Store Việt Nam</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
@@ -12,7 +15,17 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/icon/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/fonts/Roboto/Roboto-Regular.ttf">
-    <link rel="icon" href="./assets/img/vans-logo.png" type = "image/x-icon">
+    <link 
+        rel="icon"
+        href="./assets/img/vans-logo.png" 
+        type = "image/x-icon"
+    >
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./assets/css/slider.css">
 </head>
 <body>
     <div class="app">
@@ -55,43 +68,21 @@
                         <li class="header-item">
                             <a href="">HỖ TRỢ</a>
                         </li>
-                        <li class="header-item-search" onclick="showSearch()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <li 
+                            id="nut-sear-ma-dit-me-cuong"
+                            class="header-item-search" 
+                            onclick="showSearch() && $event.stopPropagation();"
+                        >
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                fill="currentColor" 
+                                class="bi bi-search"
+                                viewBox="0 0 16 16"
+                            >
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>                                                   
-                        
-                            <!-- Search space -->
-                            <div class="search">
-                                <form action="">
-                                    <div class="header-search">
-                                        <div class="search-bar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                            </svg>
-                
-                                            <input type="text" placeholder="Bạn đang tìm một đôi giày?">
-                
-                                            <i class="hide-search-icon fa-solid fa-x" onclick="hideSearch()"></i>
-                                        </div>
-                
-                                        <ul class="search-list">
-                                            <h3 class="search-title">ĐƯỜNG DẪN NHANH</h3>
-                                            <li class="search-item">
-                                                <a href="">
-                                                    Quà tặng Tết Nguyên đán</li>
-                                                </a>
-                                            <li class="search-item">
-                                                <a href="">
-                                                    Mã giảm giá </li>
-                                                </a>
-                                            <li class="search-item">
-                                                <a href="">
-                                                    Vans Authetic</li>
-                                                </a>
-                                        </ul>
-                                    </div>
-                                </form>
-                            </div>
+                            </svg>  
                         </li>
                         <li class="header-item">
                             <a href="">
@@ -144,7 +135,7 @@
                                     </li>
 
                                     <li class="cart-selection">
-                                        <a href="">
+                                        <a href="./form.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -155,7 +146,52 @@
                                 </ul>
                             </div>
                         </li> 
-                    </ul>
+                    </ul>                                                                     
+                    
+                    <!-- Search space -->
+                    <div class="search" id="search">
+                        <form action="">
+                            <div class="header-search">
+                                <div class="search-bar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    width="20" 
+                                    height="20" 
+                                    fill="currentColor" 
+                                    class="bi bi-search" 
+                                    viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+        
+                                    <input 
+                                        type="text" 
+                                        placeholder="Bạn đang tìm một đôi giày?"
+                                    >
+        
+                                    <i
+                                    id="ditmecuong"
+                                        class="hide-search-icon fa-solid fa-x" 
+                                        onclick="hideSearch() && $event.stopPropagation();"
+                                    ></i>
+                                </div>
+        
+                                <ul class="search-list">
+                                    <h3 class="search-title">ĐƯỜNG DẪN NHANH</h3>
+                                    <li class="search-item">
+                                        <a href="">
+                                            Quà tặng Tết Nguyên đán</li>
+                                        </a>
+                                    <li class="search-item">
+                                        <a href="">
+                                            Mã giảm giá </li>
+                                        </a>
+                                    <li class="search-item">
+                                        <a href="">
+                                            Vans Authetic</li>
+                                        </a>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,7 +232,7 @@
                 </div>
 
                 <div class="scroller">
-                    <ul class="scroller-list">
+                    <ul class="scroller-list slider" id="slider">
                         <li class="scroller-item">
                             <a href="">
                                 <img src="./assets/img/product-type/classic.png" alt="">
@@ -246,15 +282,6 @@
                             </a>    
                         </li>    
                     </ul>
-
-                    <div class="scroller-btn">
-                        <div class="prev-btn">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </div>
-                        <div class="next-btn">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </div>
-                    </div>
                 </div>                
 
                 <div class="sheft1 sheft">
@@ -263,7 +290,7 @@
                         Hãy xem những gì mới, ngay bây giờ.
                     </p>
                                         
-                    <ul class="products-list">
+                    <ul class="products-list slider1">
                         <li class="product-item">
                             <a href="./product.html">
                                 <div class="product-content">
@@ -336,15 +363,6 @@
                             </a>                       
                         </li>
                     </ul>
-
-                    <div class="scroller-btn">
-                        <div class="prev-btn">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </div>
-                        <div class="next-btn">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="sheft2 sheft">
@@ -391,8 +409,8 @@
                         Thậm chí nhiều lý do hơn để mua sắm.
                     </p>
                                         
-                    <ul class="products-list">
-                        <li class="product-item">
+                    <ul class="products-list slider3">
+                        <li class="product-item sheft3-child1">
                             <a href="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
                                     <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
@@ -410,7 +428,7 @@
                             </a>                       
                         </li>    
                         
-                        <li class="product-item">
+                        <li class="product-item sheft3-child2">
                             <a href="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
                                     <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3zM6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5H6zm4 1v4H6V6h4zm1-1V3.5A1.5 1.5 0 1 1 12.5 5H11zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5V11zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11H5z"/>
@@ -425,7 +443,7 @@
                             </a>                       
                         </li>                           
                         
-                        <li class="product-item">
+                        <li class="product-item sheft3-child3">
                             <a href="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
@@ -441,7 +459,7 @@
                             </a>                       
                         </li>                            
                         
-                        <li class="product-item">
+                        <li class="product-item sheft3-child4">
                             <a href="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -450,13 +468,13 @@
 
                                 <div class="product-content">
                                     <p class="product-desc2">Biến chúng thành của bạn.
-                                        <span>Custom miễn phí hỗn hợp biểu tượng cảm xúc, tên và số.</span>
+                                        <span>Custom miễn phí hỗn hợp tên và biểu tượng cảm xúc.</span>
                                     </p>        
                                 </div>    
                             </a>                       
                         </li>                            
                         
-                        <li class="product-item">
+                        <li class="product-item sheft3-child5">
                             <a href="">
                                 <img src="./assets/img/vans-logo.png" alt="">
 
@@ -469,15 +487,6 @@
                             </a>                       
                         </li>  
                     </ul>
-
-                    <div class="scroller-btn">
-                        <div class="prev-btn">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </div>
-                        <div class="next-btn">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="sheft4 sheft">
@@ -486,7 +495,7 @@
                         Làm nhiều hơn nữa với các sản phẩm và dịch vụ của Vans.
                     </p>
                                         
-                    <ul class="products-list">
+                    <ul class="products-list slider4">
                         <li class="product-item">
                             <a href="">
                                 <div class="product-content">
@@ -529,15 +538,6 @@
                             </a>                       
                         </li>
                     </ul>
-
-                    <div class="scroller-btn">
-                        <div class="prev-btn">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </div>
-                        <div class="next-btn">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="desc-content">
@@ -720,6 +720,20 @@
         </div>
     </div>
 
-    <script src="./assets/js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/slider.js"></script>
 </body>
 </html>
