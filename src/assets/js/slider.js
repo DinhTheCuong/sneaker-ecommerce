@@ -33,3 +33,12 @@ $('.slider4').slick({
     autoplaySpeed: 4000,
     arrows: false
 });
+
+$('.slider5').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false
+});

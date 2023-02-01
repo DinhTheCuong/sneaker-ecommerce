@@ -120,15 +120,6 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
-/* 
-@-webkit-keyframes move {
-    0% {
-      margin-left: -160px;
-    }
-    100% {
-      margin-left: 30px;
-    }
-} */
 
 .scroller-list::-webkit-scrollbar {
     display: none;
@@ -136,14 +127,6 @@
 
 .scroller-item {
     margin: 24px 32px 40px;
-    -webkit-animation-name: move;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-direction: right;
-    -webkit-animation-timing-function: ease-in;
-}
-
-.scroller-item:hover {
-    -webkit-animation-play-state: paused;
 }
 
 .scroller-item a {
@@ -247,10 +230,6 @@
     display: none;
 }
 
-.products-list:hover .product-item {
-    -webkit-animation-play-state: paused;
-}
-
 .product-item {
     flex: 0 0 33.33333%;
     position: relative;
@@ -261,20 +240,7 @@
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
-    /* animation: slide1 28s ease-in-out infinite; */
 }
-
-/* .product-item:hover {
-    -webkit-animation-play-state: paused;
-}
-
-@keyframes slide1 {
-    form {
-        transform: translateX(0)
-    } to {
-        transform: translateX(-320%);
-    }
-} */ 
 
 .sheft {
     position: relative;
@@ -736,11 +702,13 @@ input:focus {
 @keyframes showSearch {
     from {
         opacity: 0.6;
-        top: -8%;
+        top: -4%;
+        scale: 0.98;
     } 
     to {
         opacity: 1;
         top: 0;
+        scale: 1;
     }
 }
 
