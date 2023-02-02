@@ -5,6 +5,7 @@
 
 @media (max-width: 832px) {
     .header-item {
-        display: none;
+        /* display: none; */
+        width: 100%;
     }
 }
