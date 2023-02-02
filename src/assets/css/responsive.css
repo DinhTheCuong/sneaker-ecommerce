@@ -1,0 +1,10 @@
+@media (min-width: 833px) {
+
+}
+
+
+@media (max-width: 832px) {
+    .header-item {
+        display: none;
+    }
+}
